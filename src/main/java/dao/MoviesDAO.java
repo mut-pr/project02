@@ -32,8 +32,8 @@ public class MoviesDAO {
 
 
 	// 작성
-	String sql = "insert into movies values(movies_seq.nextval, ?, ?, ?)";
 	public int insert(MoviesDTO dto)throws Exception{
+		String sql = "insert into movies values(movies_seq.nextval, ?, ?, ?)";
 		try (Connection con = this.getConnection();
 				PreparedStatement pstat = con.prepareStatement(sql);){
 			pstat.setString(1, dto.getTitle());

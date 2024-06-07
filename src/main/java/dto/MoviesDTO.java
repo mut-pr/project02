@@ -35,14 +35,20 @@ public class MoviesDTO {
 		this.write_date = write_date;
 	}
 	
-	public MoviesDTO() {};
+	public MoviesDTO() {
+		super();
+	};
 	
 	public MoviesDTO(int id, String title, String genre, Timestamp write_date) {
-		super();
 		this.id = id;
 		this.title = title;
 		this.genre = genre;
 		this.write_date = write_date;
+	}
+	
+	public MoviesDTO(String title, String genre) {
+		this.title=title;
+		this.genre=genre;
 	}
 	
 	

@@ -10,7 +10,7 @@
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form action="input.movies" method="get">
+    <form action="/input.movies" method="get">
         <table border=1 align="center">
             <tr>
                 <td colspan="4">
