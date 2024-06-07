@@ -35,6 +35,14 @@
 				<div class="button"><button class="btnupdate">완료</button></div>
 			</form>
 		</div>
+		<div class="boxbtn">
+			<button class="btnback" type="button" id="btnback">go home</button>
+		</div>
 	</div>
 </body>
+<script>
+	$("#btnback").on("click",function(){
+		location.href="/index.jsp";
+	})
+</script>
 </html>
