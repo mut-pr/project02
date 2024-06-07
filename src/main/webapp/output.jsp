@@ -22,6 +22,7 @@
 					<div class="title">${dto.title }</div>
 					<div class="genre">${dto.genre }</div>
 					<form action="/delete.movies">
+						<input type="hidden" name="deleteid" value="${dto.id}">
 						<div class="button"><button class="btndelete">X</button></div>
 					</form>	
 				</div>
