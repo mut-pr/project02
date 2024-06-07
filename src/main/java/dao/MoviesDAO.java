@@ -33,12 +33,11 @@ public class MoviesDAO {
 
 	// 작성
 	public int insert(MoviesDTO dto)throws Exception{
-		String sql = "insert into movies values(movies_seq.nextval, ?, ?, ?)";
+		String sql = "insert into movies values(movies_seq.nextval, ?, ?, sysdate)";
 		try (Connection con = this.getConnection();
 				PreparedStatement pstat = con.prepareStatement(sql);){
 			pstat.setString(1, dto.getTitle());
 			pstat.setString(2, dto.getGenre());
-			pstat.setTimestamp(3, dto.getWrite_date());
 			int result = pstat.executeUpdate();
 			return result;
 		}
@@ -91,14 +90,13 @@ public class MoviesDAO {
 
 
 	// 수정
-	public int updateList(int id,String title,String genre, Timestamp write_date)throws Exception{
-		String sql = "update movies set title = ?, genre = ?, write_date=? where id=?";
+	public int updateList(int id,String title,String genre)throws Exception{
+		String sql = "update movies set title = ?, genre = ? where id=?";
 		try(Connection con = this.getConnection();
 				PreparedStatement pstat = con.prepareStatement(sql);){
 			pstat.setString(1, title);
 			pstat.setString(2, genre);
-			pstat.setTimestamp(3, write_date);
-			pstat.setInt(4, id);
+			pstat.setInt(3, id);
 			int result = pstat.executeUpdate();
 			return result;
 		}

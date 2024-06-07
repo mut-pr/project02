@@ -63,7 +63,7 @@
         });
 
         $("#outputBtn").on("click", function(){
-            location.href = "output.jsp";
+            location.href = "/output.movies";
         });
 
     </script>
